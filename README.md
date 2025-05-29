@@ -45,13 +45,3 @@ To run this project locally, follow these steps:
    ```
 
 5. Open your browser and visit `http://localhost:3000` to view the app.
-
-## Contributing
-
-Contributions are welcome! If you have any ideas, suggestions, or improvements, please create an issue or submit a pull request.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
