@@ -1,0 +1,274 @@
+/* ==========================
+   GitHub Profile Detective
+   Enhanced UI Styles
+   ========================== */
+:root {
+    /* Color Palette */
+    --bg-primary: #141d2f;
+    --bg-secondary: #1e2a47;
+    --accent-blue: #20428a;
+    --accent-light: #2b3d65;
+    --text-primary: #fefefe;
+    --text-secondary: #b1a7a7;
+    --highlight: #1b47a4;
+
+    /* Typography & Timing */
+    --font-mono: "Space Mono", monospace;
+    --transition-speed: 0.3s;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-mono);
+    transition: background var(--transition-speed),
+                color var(--transition-speed),
+                transform var(--transition-speed),
+                box-shadow var(--transition-speed);
+}
+
+body {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+
+.main-container {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Loader */
+.loader {
+  margin: 20px auto;
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Repo List */
+.repo-list {
+  margin-top: 20px;
+}
+.repo-list ul {
+  list-style: none;
+  padding-left: 0;
+}
+.repo-list li {
+  margin: 5px 0;
+}
+.repo-list a {
+  color: #0366d6;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Followers List */
+.followers-list {
+  margin-top: 20px;
+}
+.follower-items {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+.follower-item {
+  text-align: center;
+  width: 80px;
+}
+.follower-avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.follower-item p {
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+.main-heading {
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.search-form {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    justify-content: center;
+}
+
+.search-input {
+    flex: 1;
+    max-width: 600px;
+    padding: 15px 20px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    border: none;
+    background: var(--accent-light);
+    color: var(--text-primary);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.search-input::placeholder {
+    color: var(--text-secondary);
+}
+
+.search-input:focus {
+    outline: 2px solid var(--highlight);
+    background: #2f4e8a;
+}
+
+.search-btn {
+    padding: 0 25px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    background: var(--accent-blue);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.search-btn:hover {
+    background: #2a5cbc;
+    transform: translateY(-2px);
+}
+
+.profile-container {
+    width: 100%;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 12px 25px rgba(0,0,0,0.3);
+    animation: fadeIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.profile-content {
+    display: flex;
+    gap: 25px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-blue);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.profile-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profile-des {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+a.profile-username {
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+a.profile-username:hover {
+    color: var(--text-primary);
+}
+
+.profile-bio {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background: var(--bg-primary);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.profile-stats .stats {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--highlight);
+}
+
+.profile-info {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-top: 25px;
+}
+
+.profile-links a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    text-decoration: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.profile-links a:hover {
+    background: var(--accent-light);
+    transform: scale(1.02);
+}
+
+.error-msg {
+    color: #ff6b6b;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .search-input { max-width: 400px; }
+    .profile-avatar { width: 80px; height: 80px; }
+    .profile-name { font-size: 1.4rem; }
+}
+
+@media (max-width: 480px) {
+    .main-heading { font-size: 1.5rem; }
+    .search-form { flex-direction: column; gap: 15px; }
+    .search-btn { width: 100%; }
+    .profile-content { flex-direction: column; align-items: center; text-align: center; }
+    .profile-des { flex-direction: column; gap: 10px; }
+    .profile-info { justify-content: center; gap: 20px; }
+}
